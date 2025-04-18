@@ -11,7 +11,7 @@ import { ThemeProvider } from "next-themes";
 import UnderDevelopment from "@/components/under-development";
 
 export default function Home() {
-  const underDevelop = false;
+  const underDevelop = true;
   return (
     <ThemeProvider attribute="class">
       {underDevelop ? (
