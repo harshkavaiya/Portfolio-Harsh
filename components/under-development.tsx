@@ -30,7 +30,7 @@ export default function UnderDevelopment() {
             <span className="w-20 h-20 bg-red-100 rounded-full grid place-items-center">
               <Construction className="h-16 w-16 text-primary" />
             </span>
-            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50">
+            <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50 dark:text-white">
               Under Development
             </h1>
           </div>
