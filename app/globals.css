@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+/* Scrollbar Track */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 255, 0.4); /* change color as needed */
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Scrollbar Track Background */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -57,4 +79,3 @@
     @apply bg-background text-foreground;
   }
 }
-

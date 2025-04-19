@@ -158,10 +158,11 @@ export function ContactSection() {
                       name="message"
                       placeholder="Your message"
                       rows={5}
+                      maxLength={500}
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="w-full p-3 rounded-lg bg-muted/50 border border-primary/10 focus:border-primary/30 focus:outline-none focus:ring-2 focus:ring-primary/10 transition-all duration-300"
+                      className="w-full resize-none p-3 rounded-lg bg-muted/50 border border-primary/10 focus:border-primary/30 focus:outline-none focus:ring-2 focus:ring-primary/10 transition-all duration-300"
                     />
                   </div>
                   <Button

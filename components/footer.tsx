@@ -19,28 +19,31 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <Link
-                href="#"
+                href="https://github.com/harshkavaiya"
+                target="_blank"
                 className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link
-                href="#"
+                href="https://linkedin.com/in/harsh-kavaiya"
+                target="_blank"
                 className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="#"
+                href="https://instagram.com/harsh_kavaiya_89"
+                target="_blank"
                 className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="#"
+                href="mailto:hkavaiya001@gmail.com"
                 className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
               >
                 <Mail className="h-5 w-5" />

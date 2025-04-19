@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { AnimatedGradient } from "@/components/ui/animated-gradient";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
@@ -10,7 +9,7 @@ import { FlipWords } from "./ui/flip-words";
 
 export function HeroSection() {
   const words = [
-    "Full Stack Developer",
+    "MERN Developer",
     "UI/UX Designer",
     "Problem Solver",
     "Creative Thinker",
@@ -83,14 +82,16 @@ export function HeroSection() {
             className="mt-8 flex justify-center gap-4"
           >
             <Link
-              href="#github"
+              href="https://github.com/harshkavaiya"
+              target="_blank"
               className="group relative rounded-full p-2 text-muted-foreground transition-colors hover:text-primary"
             >
               <span className="absolute inset-0 rounded-full bg-primary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
               <Github className="relative z-10 h-6 w-6" />
             </Link>
             <Link
-              href="#"
+              href="https://linkedin.com/in/harsh-kavaiya"
+              target="_blank"
               className="group relative rounded-full p-2 text-muted-foreground transition-colors hover:text-primary"
             >
               <span className="absolute inset-0 rounded-full bg-primary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
