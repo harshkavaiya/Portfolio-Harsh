@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/hero-section";
@@ -16,7 +16,16 @@ import { Menu, X } from "lucide-react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const underDevelop = true;
+
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const adminParam = searchParams.get("admin");
+    setIsAdmin(adminParam === "harsh8989");
+  }, []);
+
+  const underDevelop = !isAdmin;
 
   const toggleMenu = () => {
     setMobileMenuOpen((prev) => !prev);
