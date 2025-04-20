@@ -36,48 +36,29 @@ const projects = [
     description:
       "A mobile-responsive fitness tracking application with progress visualization.",
     image: "/placeholder.svg?height=300&width=600",
+    tags: ["GraphQL", "Chart.js", "MongoDB", " Apollo"],
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 4,
+    title: "Fitness Tracker",
+    description:
+      "A mobile-responsive fitness tracking application with progress visualization.",
+    image: "/placeholder.svg?height=300&width=600",
     tags: ["GraphQL", "Chart.js", "MongoDB"],
     liveUrl: "#",
     githubUrl: "#",
   },
-];
-
-const projectss = [
   {
-    title: "Stripe",
+    id: 5,
+    title: "Fitness Tracker",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "Stripe",
-    description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "A mobile-responsive fitness tracking application with progress visualization.",
+    image: "/placeholder.svg?height=300&width=600",
+    tags: ["GraphQL", "Chart.js", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "#",
   },
 ];
 
@@ -104,7 +85,7 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        <HoverEffect items={projectss} />
+        <HoverEffect items={projects} />
 
         <div className="mt-12 text-center">
           <Button

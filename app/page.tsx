@@ -41,7 +41,7 @@ export default function Home() {
             <div className="container flex h-16 items-center justify-between">
               {/* Logo */}
               <div className="font-bold text-xl">
-                <a href="#" className="flex items-center gap-2">
+                <a href="/" className="flex items-center gap-2">
                   <span className="text-primary">Harsh Kavaiya</span>
                 </a>
               </div>

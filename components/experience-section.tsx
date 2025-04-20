@@ -90,13 +90,13 @@ export function ExperienceSection() {
               }`}
             >
               <div
-                className={`flex items-center ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                className={`flex items-center flex-col sm:flex-row ${
+                  index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}
               >
                 <div
-                  className={`w-1/2 ${
-                    index % 2 === 0 ? "pr-8 text-right" : "pl-8"
+                  className={`w-full sm:w-1/2 ${
+                    index % 2 === 0 ? "sm:pr-8 sm:text-right" : "sm:pl-8"
                   }`}
                 >
                   <div className="p-4 rounded-xl bg-background/80 backdrop-blur-sm border border-primary/10 dark:border-primary/30 transition-all duration-300 hover:border-primary/50 dark:hover:border-primary/50">
