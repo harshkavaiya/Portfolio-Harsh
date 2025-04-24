@@ -43,7 +43,7 @@ export function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <div className="inline-block rounded-lg dark:bg-white/80 bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
             Expertise
           </div>
           <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
@@ -65,7 +65,7 @@ export function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="flex items-center justify-center gap-4 p-4 rounded-xl bg-background/80 backdrop-blur-sm border border-primary/10 transition-all hover:shadow-lg hover:border-primary/30"
+                className="flex items-center justify-center gap-4 p-4 rounded-xl bg-background/80 backdrop-blur-sm border border-primary/10 transition-all hover:shadow-lg hover:border-primary/40"
               >
                 <Icon className="text-primary w-8 h-8 sm:w-6 sm:h-6 lg:w-6 lg:h-6" />
                 <span className="font-medium hidden sm:block lg:block">

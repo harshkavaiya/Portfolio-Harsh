@@ -22,33 +22,6 @@ const experiences = [
       "Developed and maintained multiple client projects. Worked with React, Node.js, and various databases.",
     type: "education",
   },
-  {
-    id: 3,
-    title: "Web Development Bootcamp",
-    company: "Coding Academy",
-    period: "2018",
-    description:
-      "Intensive 12-week program focused on modern web development technologies and best practices.",
-    type: "work",
-  },
-  {
-    id: 4,
-    title: "Junior Developer",
-    company: "StartUp Vision",
-    period: "2016 - 2018",
-    description:
-      "Assisted in developing web applications and gained experience in frontend technologies.",
-    type: "work",
-  },
-  {
-    id: 5,
-    title: "B.S. in Computer Science",
-    company: "Tech University",
-    period: "2012 - 2016",
-    description:
-      "Focused on software engineering and web technologies. Graduated with honors.",
-    type: "education",
-  },
 ];
 
 export function ExperienceSection() {
@@ -62,7 +35,7 @@ export function ExperienceSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <div className="inline-block dark:bg-white/80 rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
             Journey
           </div>
           <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">

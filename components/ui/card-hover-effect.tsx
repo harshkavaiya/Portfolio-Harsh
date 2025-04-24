@@ -40,7 +40,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 z-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                className="absolute inset-0 z-0 h-full w-full bg-neutral-200 dark:bg-slate-500/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -62,7 +62,7 @@ export const HoverEffect = ({
             transition={{ duration: 0.5, delay: idx * 0.1 }}
             className="transform transition-all hover:scale-105"
           >
-            <div className="relative overflow-hidden bg-white shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300 min-h-[540px] flex flex-col z-10">
+            <div className="relative overflow-hidden bg-secondary shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300 min-h-[540px] flex flex-col z-10">
               <div className="h-full flex flex-col">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/0 opacity-80 transition-opacity duration-300 group" />
                 <div className="relative h-56 overflow-hidden rounded-t-lg">
@@ -73,16 +73,14 @@ export const HoverEffect = ({
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="p-6 flex-grow bg-gradient-to-t from-white via-white/90 to-transparent">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-3">
-                    {item.title}
-                  </h3>
+                <div className="p-6 flex-grow ">
+                  <h3 className="text-2xl font-semibold  mb-3">{item.title}</h3>
                   <p className="text-gray-500 mb-4">{item.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {item.tags?.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 dark:bg-white/20 text-primary dark:text-white"
                       >
                         {tag}
                       </span>
@@ -94,7 +92,7 @@ export const HoverEffect = ({
                     <Button
                       variant="outline"
                       size="sm"
-                      className="rounded-full border-primary text-primary hover:bg-primary/10 transition-all"
+                      className="rounded-full border-primary  hover:bg-primary/10 transition-all"
                     >
                       <Github className="mr-2 h-4 w-4" />
                       Code
@@ -103,7 +101,7 @@ export const HoverEffect = ({
                   <Link href={item.liveUrl} className="flex items-center">
                     <Button
                       size="sm"
-                      className="rounded-full bg-primary text-white hover:bg-primary/80 transition-all"
+                      className="rounded-full bg-primary hover:bg-primary/80 transition-all"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo

@@ -50,7 +50,7 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <div className="inline-block rounded-lg dark:bg-white/80 bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
             Contact
           </div>
           <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">

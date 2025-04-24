@@ -73,13 +73,13 @@ export function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <div className="inline-block rounded-lg bg-primary/10 px-3 dark:bg-white/80 py-1 text-sm text-primary mb-4">
             Portfolio
           </div>
-          <h2 className="text-4xl font-extrabold mb-4 text-transparent bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600 bg-clip-text">
+          <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
             My Recent Projects
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Here are some of my recent projects. Each project showcases my
             skills and passion for development.
           </p>

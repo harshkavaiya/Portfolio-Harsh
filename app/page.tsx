@@ -42,7 +42,9 @@ export default function Home() {
               {/* Logo */}
               <div className="font-bold text-xl">
                 <a href="/" className="flex items-center gap-2">
-                  <span className="text-primary">Harsh Kavaiya</span>
+                  <span className="text-primary dark:text-white">
+                    Harsh Kavaiya
+                  </span>
                 </a>
               </div>
 

@@ -34,7 +34,6 @@ export function HeroSection() {
               Harsh Kavaiya
             </span>
             <span className="block mt-1 h-16">
-              {/* <TypewriterEffect words={words} /> */}
               <FlipWords words={words} />
             </span>
           </motion.h1>
@@ -55,7 +54,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="ghost"
-              className="group relative overflow-hidden bg-secondary/10 rounded-full px-6 py-2 transition-all duration-300 ease-out"
+              className="group relative overflow-hidden bg-secondary/30 rounded-full px-6 py-2 transition-all duration-300 ease-out"
             >
               <Link href="#contact" className="flex items-center ">
                 <span className="relative z-10">Hire Me</span>
@@ -66,7 +65,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="ghost"
-              className="group relative overflow-hidden rounded-full bg-secondary/10 px-6 py-2 transition-all duration-300 ease-out"
+              className="group relative overflow-hidden rounded-full bg-secondary/30 px-6 py-2 transition-all duration-300 ease-out"
             >
               <Link href="#resume" download className="flex items-center">
                 <span className="relative z-10">Download Resume</span>
@@ -84,17 +83,17 @@ export function HeroSection() {
             <Link
               href="https://github.com/harshkavaiya"
               target="_blank"
-              className="group relative rounded-full p-2 text-muted-foreground transition-colors hover:text-primary"
+              className="group relative rounded-full p-2 text-secondary-foreground transition-colors dark:hover:text-neutral-300 hover:text-primary"
             >
-              <span className="absolute inset-0 rounded-full bg-primary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+              <span className="absolute inset-0 rounded-full bg-secondary/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
               <Github className="relative z-10 h-6 w-6" />
             </Link>
             <Link
               href="https://linkedin.com/in/harsh-kavaiya"
               target="_blank"
-              className="group relative rounded-full p-2 text-muted-foreground transition-colors hover:text-primary"
+              className="group relative rounded-full p-2 text-secondary-foreground transition-colors dark:hover:text-neutral-300 hover:text-primary"
             >
-              <span className="absolute inset-0 rounded-full bg-primary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+              <span className="absolute inset-0 rounded-full bg-secondary/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
               <Linkedin className="relative z-10 h-6 w-6" />
             </Link>
           </motion.div>
