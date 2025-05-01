@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import mongoose from "mongoose";
-import connectDB from "@/lib/MongoDb";
+import { connectDB } from "@/lib/MongoDb";
 import { rateLimiter } from "@/lib/rateLimiter";
 
 const ContactSchema = new mongoose.Schema(
@@ -18,18 +18,23 @@ const Contact =
   mongoose.models.Contact || mongoose.model("Contact", ContactSchema);
 
 export async function POST(req: NextRequest) {
-  const ip = req.headers.get("x-forwarded-for") || "unknown";
-  if (!rateLimiter(ip)) {
-    return NextResponse.json(
-      { error: "Too many requests. Please try again later." },
-      { status: 429 }
-    );
+  try {
+    const ip = req.headers.get("x-forwarded-for") || "unknown";
+    if (!rateLimiter(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+  } catch (err) {
+    return NextResponse.json({ error: "Rate limiter failed" }, { status: 500 });
   }
 
   try {
     await connectDB();
     const body = await req.json();
     const { name, email, subject, message } = body;
+    console.log("Received contact:", body);
 
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
