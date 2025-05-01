@@ -7,7 +7,7 @@ export async function connectDB() {
   if (isConnected) return;
   try {
     await mongoose.connect(process.env.MONGO_URI!, {
-      dbName: "myPortfolio",
+      dbName: "test",
     });
     isConnected = true;
     console.log("✅ MongoDB connected");
