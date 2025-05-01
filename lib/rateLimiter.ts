@@ -1,5 +1,5 @@
 const rateLimitWindowMS = 60 * 1000; // 1 minute
-const maxRequests = 3;
+const maxRequests = 10;
 
 type RateLimitRecord = {
   timestamp: number;

@@ -34,7 +34,6 @@ export async function POST(req: NextRequest) {
     await connectDB();
     const body = await req.json();
     const { name, email, subject, message } = body;
-    console.log("Received contact:", body);
 
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
