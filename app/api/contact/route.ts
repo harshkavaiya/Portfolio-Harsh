@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 import mongoose from "mongoose";
 import { connectDB } from "@/lib/MongoDb";
 import { rateLimiter } from "@/lib/rateLimiter";
+import nodemailer from "nodemailer";
 
 const ContactSchema = new mongoose.Schema(
   {
@@ -13,6 +14,8 @@ const ContactSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+const apppass = process.env.APP_PASS;
 
 const Contact =
   mongoose.models.Contact || mongoose.model("Contact", ContactSchema);
@@ -30,6 +33,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Rate limiter failed" }, { status: 500 });
   }
 
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "harshkavaiya30@gmail.com",
+      pass: apppass,
+    },
+  });
+
   try {
     await connectDB();
     const body = await req.json();
@@ -41,7 +52,21 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+    // Send to YOU
+    await transporter.sendMail({
+      from: email,
+      to: "harshkavaiya30@gmail.com",
+      subject: `New Contact from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+    });
 
+    // Send to USER
+    await transporter.sendMail({
+      from: "harshkavaiya30@gmail.com",
+      to: email,
+      subject: "Thanks for contacting me!",
+      text: `Hi ${name},\n\nThanks for your message! I'll get back to you soon.\n\nBest,\n Harsh Kavaiya`,
+    });
     const newContact = new Contact({ name, email, subject, message });
     await newContact.save();
 

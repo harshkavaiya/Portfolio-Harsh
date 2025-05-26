@@ -7,9 +7,9 @@ import {
   SiTailwindcss,
   SiMongodb,
   SiPostgresql,
-  SiDocker,
   SiBootstrap,
   SiExpress,
+  SiFirebase,
   SiFigma,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
@@ -28,7 +28,7 @@ const skills = [
   { name: "Node", icon: FaNodeJs },
   { name: "Express", icon: SiExpress },
   { name: "PostgreSQL", icon: SiPostgresql },
-  { name: "Docker", icon: SiDocker },
+  { name: "Firebase", icon: SiFirebase },
   { name: "Figma", icon: SiFigma },
 ];
 

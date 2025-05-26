@@ -2,35 +2,35 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { it } from "node:test";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./button";
 import { ExternalLink, Github } from "lucide-react";
 
 export const HoverEffect = ({
-  items,
   className,
+  projects,
 }: {
-  items: {
-    title?: string;
-    description?: string;
+  className?: string;
+  projects: {
+    title: string;
+    description: string;
     image?: string;
     tags?: string[];
-    liveUrl: string;
-    githubUrl: string;
+    liveUrl?: string;
+    githubUrl?: string;
+    featured?: boolean;
   }[];
-  className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
         className
       )}
     >
-      {items.map((item, idx) => (
+      {projects.map((item, idx) => (
         <div
           key={idx}
           className="relative group block p-2 h-full w-full"
@@ -62,15 +62,15 @@ export const HoverEffect = ({
             transition={{ duration: 0.5, delay: idx * 0.1 }}
             className="transform transition-all hover:scale-105"
           >
-            <div className="relative overflow-hidden bg-secondary shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300 min-h-[540px] flex flex-col z-10">
+            <div className="relative overflow-hidden bg-secondary shadow-lg rounded-lg hover:shadow-2xl transition-shadow duration-300 min-h-[500px] flex flex-col z-10">
               <div className="h-full flex flex-col">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/0 opacity-80 transition-opacity duration-300 group" />
                 <div className="relative h-56 overflow-hidden rounded-t-lg">
                   <Image
-                    src={item.image || "/images/placeholder.png"}
+                    src={item.image || "/placeholder.png"}
                     alt={"project image"}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover object-top scale-105 md:scale-100 transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
                 <div className="p-6 flex-grow ">
@@ -88,7 +88,11 @@ export const HoverEffect = ({
                   </div>
                 </div>
                 <div className="p-6 absolute w-full bottom-0 flex justify-between">
-                  <Link href={item.githubUrl} className="flex items-center">
+                  <Link
+                    href={item.githubUrl || "#"}
+                    className="flex items-center"
+                    target="_blank"
+                  >
                     <Button
                       variant="outline"
                       size="sm"
@@ -98,7 +102,11 @@ export const HoverEffect = ({
                       Code
                     </Button>
                   </Link>
-                  <Link href={item.liveUrl} className="flex items-center">
+                  <Link
+                    href={item.liveUrl || "#"}
+                    className="flex items-center"
+                    target="_blank"
+                  >
                     <Button
                       size="sm"
                       className="rounded-full bg-primary hover:bg-primary/80 transition-all"

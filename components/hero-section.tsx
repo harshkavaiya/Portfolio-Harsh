@@ -67,7 +67,11 @@ export function HeroSection() {
               variant="ghost"
               className="group relative overflow-hidden rounded-full bg-secondary/30 px-6 py-2 transition-all duration-300 ease-out"
             >
-              <Link href="#resume" download className="flex items-center">
+              <Link
+                href="https://drive.google.com/file/d/1cTdQvAkdb4Eb1ywqkq35X6jMtVjm4DrJ/view?usp=sharing"
+                className="flex items-center"
+                target="_blank"
+              >
                 <span className="relative z-10">Download Resume</span>
 
                 <Download className="relative z-10 ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />

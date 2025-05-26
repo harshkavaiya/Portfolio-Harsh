@@ -10,7 +10,7 @@ const experiences = [
     company: "Vidhya Bharti School",
     period: "2020 - 2022",
     description:
-      "Lead the frontend development team in building a SaaS platform. Implemented new features and optimized performance.",
+      "Completed Class 11–12 in Commerce stream from Vidhya Bharti. Built a strong academic foundation before transitioning into the tech field during college.",
     type: "education",
   },
   {
@@ -19,7 +19,7 @@ const experiences = [
     company: "Adarsh BCA College",
     period: "2022 - 2025",
     description:
-      "Developed and maintained multiple client projects. Worked with React, Node.js, and various databases.",
+      "Completed Bachelor of Computer Applications with a focus on web development. Gained hands-on experience with React, Node.js, and the MERN stack through personal and academic projects.",
     type: "education",
   },
 ];
@@ -42,8 +42,7 @@ export function ExperienceSection() {
             Experience & Education
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            My professional journey and educational background that have shaped
-            my career in web development.
+            A snapshot of my academic and project-based experience.
           </p>
         </motion.div>
         <div className="relative max-w-3xl mx-auto">

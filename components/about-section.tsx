@@ -38,23 +38,26 @@ export function AboutSection() {
               About Me
             </div>
             <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-              Passionate Developer & Designer
+              MERN Stack Developer in the Making
             </h2>
             <p className="text-muted-foreground mb-4">
-              I'm a passionate Full Stack Developer with over 5 years of
-              experience building web applications. I specialize in JavaScript,
-              React, Node.js, and modern web technologies.
+              I'm a dedicated and curious developer with a strong interest in
+              building full-stack web applications using MongoDB, Express.js,
+              React, and Node.js. I thrive on writing clean, efficient code and
+              turning ideas into interactive, real-world projects.
             </p>
             <p className="text-muted-foreground mb-4">
-              My journey in web development started when I built my first
-              website at the age of 16. Since then, I've worked with startups
-              and established compa
+              My passion for web development began with a simple curiosity about
+              how websites work — which soon turned into late-night coding
+              sessions and building personal projects. I’m constantly learning
+              and growing, with a focus on mastering the MERN stack and modern
+              JavaScript tools.
             </p>
-            nies to create efficient, scalable, and user-friendly applications.
             <p className="text-muted-foreground mb-4">
-              When I'm not coding, you can find me hiking, reading, or
-              experimenting with new technologies. I'm always looking for new
-              challenges and opportunities to grow as a developer.
+              When I’m not coding, you’ll find me exploring new tech trends,
+              sketching UI ideas, or diving into open-source contributions. I’m
+              eager to collaborate, build, and bring innovative solutions to
+              life.
             </p>
             <div className="grid grid-cols-1 text-left gap-2 mt-8">
               <div className="p-6 rounded-xl bg-background/80 backdrop-blur-sm border border-primary/10 transition-all duration-300 hover:border-primary/30">
